@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
@@ -12,7 +13,13 @@
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
     "babel-jest": "^27.4.6",
+    "husky": "^7.0.4",
     "jest": "^27.4.7",
+    "lint-staged": "^12.2.2",
+    "prettier": "2.5.1",
     "typescript": "^4.5.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
